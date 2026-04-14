@@ -1,0 +1,111 @@
+.payment-section-card {
+  background: var(--card-bg, #1a1a24);
+  border: 1px solid var(--border-color, #2d2d3d);
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.payment-section-header h3 {
+  margin: 0 0 10px 0;
+  color: var(--text-primary, #ffffff);
+}
+
+.payment-section-header p {
+  margin: 0 0 20px 0;
+  color: var(--text-secondary, #9ca3af);
+  font-size: 0.95rem;
+}
+
+.payment-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-end;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.payment-controls .form-group {
+  margin: 0;
+  flex: 1;
+  min-width: 150px;
+}
+
+.btn-calculate {
+  padding: 12px 24px;
+  background: var(--accent-primary, #6366f1);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  height: 42px; /* match inputs approx */
+}
+
+.btn-calculate:hover {
+  background: var(--accent-primary-hover, #4f46e5);
+}
+
+.payment-result {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--border-color, #2d2d3d);
+}
+
+.payment-result h4 {
+  margin: 0 0 16px 0;
+  color: var(--text-primary, #ffffff);
+  border-bottom: 1px solid var(--border-color, #2d2d3d);
+  padding-bottom: 10px;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: var(--text-secondary, #9ca3af);
+  font-size: 1.05rem;
+}
+
+.result-row.discount {
+  color: var(--accent-green, #4ade80);
+}
+
+.result-row.penalty {
+  color: #ef4444;
+}
+
+.result-row.total {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-color, #2d2d3d);
+  color: var(--text-primary, #ffffff);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.status-message {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.status-message.success {
+  background: rgba(74, 222, 128, 0.1);
+  color: var(--accent-green, #4ade80);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+.status-message.error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}

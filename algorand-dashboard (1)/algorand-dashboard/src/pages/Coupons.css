@@ -1,0 +1,66 @@
+.coupons-page {
+  padding: 24px;
+}
+
+.coupons-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.coupons-header-section .title {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--text-primary, #ffffff);
+}
+
+.coupons-header-section .subtitle {
+  margin: 4px 0 0 0;
+  color: var(--text-secondary, #9ca3af);
+  font-size: 1rem;
+}
+
+.btn-add-coupon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-primary, #6366f1);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.btn-add-coupon:hover {
+  background: var(--accent-primary-hover, #4f46e5);
+  transform: translateY(-1px);
+}
+
+.plus-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.coupons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed var(--border-color, #2d2d3d);
+  border-radius: 16px;
+  color: var(--text-secondary, #9ca3af);
+  font-size: 1.1rem;
+}

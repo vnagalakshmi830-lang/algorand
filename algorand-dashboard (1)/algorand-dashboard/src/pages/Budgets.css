@@ -1,0 +1,121 @@
+.budgets-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.budgets-header-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.budget-summary-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bs-label {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.bs-value {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.full-width-card h3 {
+  margin-bottom: 1rem;
+}
+
+.pb-container {
+  width: 100%;
+  height: 8px;
+  background-color: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem 0 0.5rem;
+}
+
+.pb-container.lg {
+  height: 12px;
+  border-radius: 6px;
+}
+
+.pb-fill {
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.pb-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.category-card {
+  transition: transform 0.2s;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.cat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cat-header h4 {
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status-indicator.green {
+  background-color: var(--success);
+  box-shadow: 0 0 5px var(--success);
+}
+
+.status-indicator.red {
+  background-color: var(--danger);
+  box-shadow: 0 0 5px var(--danger);
+}
+
+.cat-amounts {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.cat-amounts .text-muted {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.exceed-warning {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--danger);
+  background: var(--danger-light);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+}

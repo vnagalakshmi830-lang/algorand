@@ -1,0 +1,75 @@
+.cash-flow-container {
+  background-color: var(--card-bg, #1a1a24);
+  border: 1px solid var(--border-color, #2a2a35);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cash-flow-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.summary-item {
+  flex: 1;
+  min-width: 200px;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summary-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8b8b9e;
+  font-weight: 600;
+}
+
+.summary-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.summary-item.incoming .summary-value {
+  color: #00d1b2;
+}
+
+.summary-item.outgoing .summary-value {
+  color: #ff3860;
+}
+
+.summary-item.net .summary-value {
+  color: #8b8b9e;
+}
+
+.summary-item.net.positive .summary-value {
+  color: #3273dc;
+}
+
+.summary-item.net.negative .summary-value {
+  color: #ff3860;
+}
+
+.cash-flow-graph {
+  margin-top: 10px;
+}
+
+.cash-flow-empty, .cash-flow-loading {
+  background-color: var(--card-bg, #1a1a24);
+  border: 1px solid var(--border-color, #2a2a35);
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #8b8b9e;
+  font-size: 1.1rem;
+}

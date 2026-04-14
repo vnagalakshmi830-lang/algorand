@@ -1,0 +1,122 @@
+/* 1. Chatbot Container */
+.blue-theme-container {
+  background-color: #FFFFFF !important;
+  border: 1px solid #EFF6FF !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1) !important;
+  border-radius: 12px !important;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* 2. Header (FinChain Bot) */
+.blue-theme-header {
+  background: linear-gradient(135deg, #2563EB, #3B82F6) !important;
+  color: #FFFFFF !important;
+  padding: 1rem;
+  border-bottom: 2px solid #EFF6FF !important; /* light blue border */
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.blue-theme-iframe {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #FFFFFF !important;
+}
+
+/* 
+  Below are the requested styles for the internal Chatbot UI elements:
+  (Chat Messages, Input Field, Send Button)
+  
+  Note: Since the chatbot is currently embedded securely via an external 
+  iframe (Chatbase), standard Cross-Origin Resource Sharing (CORS) and 
+  Same-Origin Policy restrict local CSS from styling elements inside the iframe. 
+  These classes are defined here to comply with the new Blue & White theme spec, 
+  so they will seamlessly apply if the widget is migrated to a local UI component.
+*/
+
+/* 3. Chat Messages */
+/* User message */
+.finchain-chat-message.user {
+  background-color: #2563EB;
+  color: #FFFFFF;
+  border-radius: 12px 12px 0 12px;
+}
+
+/* Bot message */
+.finchain-chat-message.bot {
+  background-color: #EFF6FF;
+  color: #1F2937;
+  border-radius: 12px 12px 12px 0;
+}
+
+/* 4. Input Field */
+.finchain-chat-input {
+  background-color: #FFFFFF;
+  border: 1px solid #EFF6FF;
+  color: #1F2937;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.finchain-chat-input:focus {
+  border-color: #2563EB;
+}
+
+/* 5. Send Button */
+.finchain-chat-send {
+  background-color: #2563EB;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.finchain-chat-send:hover {
+  background-color: #1D4ED8; /* Slight darker blue */
+}
+
+/* =========================================
+   STEP 1: FORCE WHITE THEME (GLOBAL OVERRIDE)
+   ========================================= */
+.chat-container,
+.chat-body,
+.chat-wrapper,
+.chat-message-area,
+iframe body {
+  background-color: #FFFFFF !important;
+  color: #1F2937 !important;
+  background-image: none !important;
+  opacity: 1 !important;
+}
+
+/* STEP 2: IFRAME OVERRIDE (CRITICAL) */
+iframe {
+  background: #FFFFFF !important;
+}
+
+/* =========================================
+   STEP 4: ENSURE READABILITY 
+   ========================================= */
+.chat-message-area * {
+  color: #1F2937 !important;
+}
+
+/* =========================================
+   STEP 5: REMOVE CHATBASE BRANDING
+   ========================================= */
+.chatbase-branding,
+.powered-by,
+.chatbase-footer {
+  display: none !important;
+}
+
+

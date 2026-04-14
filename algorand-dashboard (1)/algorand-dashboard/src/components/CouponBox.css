@@ -1,0 +1,114 @@
+.coupon-card {
+  background: var(--card-bg, #1a1a24);
+  border: 1px solid var(--border-color, #2d2d3d);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.coupon-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.coupon-card.expired {
+  opacity: 0.6;
+}
+
+.coupon-card.applied {
+  border-color: var(--accent-green, #4ade80);
+}
+
+.coupon-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coupon-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary, #ffffff);
+}
+
+.coupon-discount {
+  background: rgba(74, 222, 128, 0.1);
+  color: var(--accent-green, #4ade80);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.coupon-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.coupon-code-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px dashed var(--border-color, #2d2d3d);
+}
+
+.coupon-code-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #9ca3af);
+}
+
+.coupon-code-value {
+  font-family: monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: var(--text-primary, #ffffff);
+}
+
+.coupon-expiry {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary, #9ca3af);
+}
+
+.coupon-card-footer {
+  margin-top: auto;
+}
+
+.coupon-apply-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent-primary, #6366f1);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.coupon-apply-btn:hover:not(:disabled) {
+  background: var(--accent-primary-hover, #4f46e5);
+}
+
+.coupon-apply-btn:disabled {
+  background: var(--bg-secondary, #2d2d3d);
+  color: var(--text-secondary, #9ca3af);
+  cursor: not-allowed;
+}
+
+.coupon-apply-btn.applied-btn {
+  background: rgba(74, 222, 128, 0.1);
+  color: var(--accent-green, #4ade80);
+  border: 1px solid var(--accent-green, #4ade80);
+}
